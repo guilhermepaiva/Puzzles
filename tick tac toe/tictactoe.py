@@ -7,16 +7,12 @@ def init_board():
 def check_rules(board, line, column):
     line, column = int(line), int(column)
     if line not in [0, 1, 2]:
-        print("line", line not in [0, 1, 2])
         print('You should enter line and column between 0 and 2! Pls, verify the rules!\n')
-        print("[Rules: it is a 3x3 board and positoins starts with 0 and ends with 2 - for example: first posision is 0 0]\n")
-        
+        print("[Rules: it is a 3x3 board and positions starts with 0 and ends with 2 - for example: first position is 0 0]\n")      
         return False
     elif column not in [0, 1, 2]:
-        print("column")
         print('You should enter line and column between 0 and 2! Pls, verify the rules!\n')
-        print("[Rules: it is a 3x3 board and positoins starts with 0 and ends with 2 - for example: first posision is 0 0]\n")
-        
+        print("[Rules: it is a 3x3 board and positions starts with 0 and ends with 2 - for example: first position is 0 0]\n")     
         return False
     elif board[line][column] != ' ':
         print('This position has already a symbol. Try another position.\n')
@@ -48,7 +44,7 @@ def verify_victory(board, symbol):
 if __name__ == "__main__":
     board = init_board()
 
-    print("[Rules: it is a 3x3 board and positoins starts with 0 and ends with 2 - for example: first posision is 0 0]\n")
+    print("[Rules: it is a 3x3 board and positions starts with 0 and ends with 2 - for example: first position is 0 0]\n")
 
     symbols = ['X', 'O']
     i = 0
@@ -69,6 +65,7 @@ if __name__ == "__main__":
         print(15*"-")
 
         i += 1
+    print("Draw! Nobody won!")
         
 
         
